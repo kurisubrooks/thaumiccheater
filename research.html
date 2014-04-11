@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Thaumcraft 4.1 Research Helper</title>
+		<script type="text/javascript" src="js/buckets-minified.js"></script>
+        <script type="text/javascript" src="js/aspects.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ddslick.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/aspects.css">
+		
+	</head>
+	<body>
+		<ul id="result" class="aspectlist" title="Result"></ul>
+		<center>
+        <table>
+		<tr><td>From:</td><td><div id="fromSel"></div></td></tr>
+		<tr><td>To:</td><td><div id="toSel"></div></td></tr>
+		<tr><td>Min. Steps:</td><td><input id="spinner" name="value" value="0" style="width:140px" /></td></tr>
+		<tr><td></td><td><a href="javascript: run();">Find Connection</a></td></tr>
+		</table>
+        </center>
+	</body>
+</html>

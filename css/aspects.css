@@ -1,0 +1,10 @@
+			.aspectlist { list-style:none; padding:0; overflow:scroll; height:300px; display:block; width:650px; }
+			.aspectlist > li { display:block; width:145px; float:left; font-size:100%; font-family:serif; }
+			#avail > li > * { padding:5px; display:block; overflow:hidden; text-decoration:none; color:#333; cursor:pointer; }
+			#avail > li > a:hover { background:#f3f3f3; color:#000; font-weight:bold; }
+			.aspectlist > li img { vertical-align:middle; float:left; margin-right:5px; max-width:64px; }
+			.aspectlist .desc { color:#aaa; overflow: hidden; font-weight:normal; line-height: 1.4em; font-size:small; }
+			.aspectlist > li > div { text-align:left; }
+			#avail > li > a.unavail { background:#f3f3f3; color:#999; }
+			#avail > li > a.unavail:hover { background:#e8e8e8; }
+			#result > li { padding-bottom:10px; text-align:center; }

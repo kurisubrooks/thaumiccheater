@@ -1,0 +1,47 @@
+body {
+  background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+	padding-top: 35px;
+    padding-bottom: 20px;
+    
+	background-image: url(../img/bg4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.content {
+  display: inline-block;
+  text-align: left;
+  background: white;
+  margin: 0 auto;
+  padding: 10px;
+	border: 1px solid #dddddd;
+	-moz-box-shadow: 5px 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 5px 5px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px rgba(0,0,0,0.2);
+  
+}
+
+span{display:inline-block;padding: 10px;}
+opaq{opacity:0.1;filter:Alpha(opacity=10);}
+
+grey {color: #8b8b8b;}
+red {color: #e74c3c;}
+blue {color: #5bc0de;}
+orange {color: #ff7722;}
+green {color: #1abc9c;}
+white {color: #ffffff;}
+purple {color: #4B088A;}
