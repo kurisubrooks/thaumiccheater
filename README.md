@@ -1,4 +1,4 @@
 thaumiccheater
 ==============
 
-a website with fancy plugins that help with your Thaumcraft experience~
+a website with some fancy coding, to help you with your thaumcraft research~
