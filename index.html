@@ -18,7 +18,6 @@
 <link href="css/main.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-<link rel="stylesheet" type="text/css" href="css/scroll.css"/>
     
 <script>
 $(function() {
@@ -75,9 +74,9 @@ $(function() {
 				return search(queue, to, visited);
 			}
 			
-			combinations = { "void": ["air", "entropy"], "light": ["air", "fire"], "energy": ["order", "fire"], "motion": ["air", "water"], "stone": ["earth", "earth"], "life": ["water", "earth"], "weather": ["air", "ice"], "ice": ["water", "order"], "crystal": ["stone", "water"], "death": ["life", "entropy"], "flight": ["air", "motion"], "darkness": ["void", "light"], "soul": ["life", "death"], "heal": ["life", "life"], "travel": ["motion", "earth"], "poison": ["water", "death"], "eldritch": ["void", "darkness"], "magic": ["void", "energy"], "aura": ["magic", "air"], "taint": ["magic", "entropy"], "seed": ["life", "order"], "slime": ["life", "water"], "plant": ["seed", "earth"], "tree": ["air", "plant"], "beast": ["motion", "life"], "flesh": ["death", "beast"], "undead": ["motion", "death"], "mind": ["earth", "soul"], "senses": ["air", "soul"], "man": ["beast", "mind"], "crop": ["plant", "man"], "harvest": ["crop", "tool"], "metal": ["stone", "order"], "mine": ["man", "stone"], "tool": ["man", "order"], "weapon": ["tool", "entropy"], "armor": ["tool", "earth"], "hunger": ["life", "void"], "greed": ["man", "hunger"], "craft": ["man", "tool"], "cloth": ["tool", "beast"], "mechanism": ["motion", "tool"], "trap": ["motion", "entropy"], "exchange": ["motion", "water"], "wrath": ["weapon", "fire"], "nether": ["fire", "magic"], "gluttony": ["hunger", "hunger"], "envy": ["senses", "hunger"], "sloth": ["trap", "soul"], "pride": ["flight", "void"], "lust": ["flesh", "hunger"], "time": ["void", "order"] };
+			combinations = { "void": ["air", "entropy"], "light": ["air", "fire"], "energy": ["order", "fire"], "motion": ["air", "water"], "stone": ["earth", "earth"], "life": ["water", "earth"], "weather": ["air", "ice"], "ice": ["water", "order"], "crystal": ["stone", "water"], "death": ["life", "entropy"], "flight": ["air", "motion"], "darkness": ["void", "light"], "soul": ["life", "death"], "heal": ["life", "life"], "travel": ["motion", "earth"], "poison": ["water", "death"], "eldritch": ["void", "darkness"], "magic": ["void", "energy"], "aura": ["magic", "air"], "taint": ["magic", "entropy"], "seed": ["life", "order"], "slime": ["life", "water"], "plant": ["seed", "earth"], "tree": ["air", "plant"], "beast": ["motion", "life"], "flesh": ["death", "beast"], "undead": ["motion", "death"], "mind": ["earth", "soul"], "senses": ["air", "soul"], "man": ["beast", "mind"], "crop": ["plant", "man"], "harvest": ["crop", "tool"], "metal": ["stone", "order"], "mine": ["man", "stone"], "tool": ["man", "order"], "weapon": ["tool", "entropy"], "armor": ["tool", "earth"], "hunger": ["life", "void"], "greed": ["man", "hunger"], "craft": ["man", "tool"], "cloth": ["tool", "beast"], "mechanism": ["motion", "tool"], "trap": ["motion", "entropy"], "exchange": ["motion", "water"] };
 			translate = { "air": "aer", "earth": "terra", "fire": "ignis", "water": "aqua", "order": "ordo", "entropy": "perditio", "void": "vacuos", "light": "lux", "energy": "potentia", "motion": "motus", "stone": "saxum", "life": "victus", "weather": "tempestas", "ice": "gelum", "crystal": "vitreus", "death": "mortuus", "flight": "volatus", "darkness": "tenebrae", "soul": "spiritus", "heal": "sano", "travel": "iter", "poison": "venenum", "eldritch": "alienis", "magic": "praecantatio", "aura": "auram", "taint": "vitium", "seed": "granum", "slime": "limus", "plant": "herba", "tree": "arbor", "beast": "bestia", "flesh": "corpus", "undead": "exanimis", "mind": "cognitio", "senses": "sensus", "man": "humanus", "crop": "messis", "harvest": "meto", "metal": "metallum", "mine": "perfodio", "tool": "instrumentum", "weapon": "telum", "armor": "tutamen", "hunger": "fames", "greed": "lucrum", "craft": "fabrico", "cloth": "pannus", "mechanism": "machina", "trap": "vinculum", "exchange": "permutatio", "wrath": "ira", "nether": "infernus", "gluttony": "gula", "envy": "invidia", "sloth": "desidia", "pride": "superbia", "lust": "luxuria", "time": "tempus" };
-			aspects = [ "air", "earth", "fire", "water", "order", "entropy", "void", "light", "energy", "motion", "stone", "life", "weather", "ice", "crystal", "death", "flight", "darkness", "soul", "heal", "travel", "poison", "eldritch", "magic", "aura", "taint", "seed", "slime", "plant", "tree", "beast", "flesh", "undead", "mind", "senses", "man", "crop", "harvest", "metal", "mine", "tool", "weapon", "armor", "hunger", "greed", "craft", "cloth", "mechanism", "trap", "exchange", "wrath", "nether", "gluttony", "envy", "sloth", "pride", "lust", "time" ].sort(function(a,b){
+			aspects = [ "air", "earth", "fire", "water", "order", "entropy", "void", "light", "energy", "motion", "stone", "life", "weather", "ice", "crystal", "death", "flight", "darkness", "soul", "heal", "travel", "poison", "eldritch", "magic", "aura", "taint", "seed", "slime", "plant", "tree", "beast", "flesh", "undead", "mind", "senses", "man", "crop", "harvest", "metal", "mine", "tool", "weapon", "armor", "hunger", "greed", "craft", "cloth", "mechanism", "trap", "exchange", ].sort(function(a,b){
 				return (a == b) ? 0 : (translate[a]<translate[b]) ? -1 : 1;
 			});
 			fm = [ "wrath", "nether", "gluttony", "envy", "sloth", "pride", "lust" ]
@@ -199,67 +198,67 @@ $(function() {
     <div class="text-center">
 
     <h2>Primal Aspects:</h2>
-	<img id="aer1" src="img/aer.png" title="aer">
-	<img id="aqua1" src="img/aqua.png" title="aqua">
-	<img id="ignis1" src="img/ignis.png" title="ignis">
-	<img id="perditio1" src="img/perditio.png" title="perditio">
-	<img id="ordo1" src="img/ordo.png" title="ordo">
-	<img id="terra1" src="img/terra.png" title="terra">
+	<img id="aer1" src="aspects/color/aer.png" title="aer">
+	<img id="aqua1" src="aspects/color/aqua.png" title="aqua">
+	<img id="ignis1" src="aspects/color/ignis.png" title="ignis">
+	<img id="perditio1" src="aspects/color/perditio.png" title="perditio">
+	<img id="ordo1" src="aspects/color/ordo.png" title="ordo">
+	<img id="terra1" src="aspects/color/terra.png" title="terra">
     <hr>
     
 	<h2>Compound Aspects:</h2>
 	<div class="row">
     <div class="col-sm-4">
-    <img src="img/alienis.png" title="alienis"> = 		<img src="img/vacuos.png" title="vacuos"> + 		<img src="img/tenebrae.png" title="tenebrae"><br>
-    <img src="img/bestia.png" title="bestia"> = 		<img src="img/motus.png" title="motus"> + 		<img src="img/victus.png"><br>
-    <img src="img/exanimis.png" title="exanimis"> = 		<img src="img/motus.png" title="motus"> + 		<img src="img/mortuus.png"><br>
-    <img src="img/gelum.png" title="gelum"> = 		<img src="img/aqua.png" title="aqua"> + 			<img src="img/ordo.png"><br>
-    <img src="img/humanus.png" title="humanus"> = 		<img src="img/bestia.png" title="bestia"> + 		<img src="img/cognitio.png"><br>
-    <img src="img/limus.png" title="limus"> = 		<img src="img/victus.png" title="victus"> + 		<img src="img/aqua.png"><br>
-    <img src="img/machina.png" title="machina"> = 		<img src="img/motus.png"> + 		<img src="img/instrumentum.png"><br>
-    <img src="img/meto.png" title="meto"> = 			<img src="img/messis.png"> + 		<img src="img/instrumentum.png"><br>
-	<img src="img/pannus.png" title="pannus"> = 		<img src="img/instrumentum.png"> + 	<img src="img/bestia.png"><br>
-    <img src="img/potentia.png" title="potentia"> = 		<img src="img/ordo.png"> + 			<img src="img/ignis.png"><br>
-    <img src="img/saxum.png" title="saxum"> = 		<img src="img/terra.png"> + 		<img src="img/terra.png"><br>
-    <img src="img/telum.png" title="telum"> = 		<img src="img/instrumentum.png"> + 	<img src="img/perditio.png"><br>
-    <img src="img/tutamen.png" title="tutamen"> = 		<img src="img/instrumentum.png"> + 	<img src="img/terra.png"><br>
-    <img src="img/victus.png" title="victus"> = 		<img src="img/aqua.png"> + 			<img src="img/terra.png"><br>
-    <img src="img/vitreus.png" title="viterus"> = 		<img src="img/saxum.png"> + 		<img src="img/aqua.png">
+    <img src="aspects/color/alienis.png" title="alienis"> = 		<img src="aspects/color/vacuos.png" title="vacuos"> + 		<img src="aspects/color/tenebrae.png" title="tenebrae"><br>
+    <img src="aspects/color/bestia.png" title="bestia"> = 			<img src="aspects/color/motus.png" title="motus"> + 		<img src="aspects/color/victus.png"><br>
+    <img src="aspects/color/exanimis.png" title="exanimis"> = 		<img src="aspects/color/motus.png" title="motus"> + 		<img src="aspects/color/mortuus.png"><br>
+    <img src="aspects/color/gelum.png" title="gelum"> = 			<img src="aspects/color/aqua.png" title="aqua"> + 			<img src="aspects/color/ordo.png"><br>
+    <img src="aspects/color/humanus.png" title="humanus"> = 		<img src="aspects/color/bestia.png" title="bestia"> + 		<img src="aspects/color/cognitio.png"><br>
+    <img src="aspects/color/limus.png" title="limus"> = 			<img src="aspects/color/victus.png" title="victus"> + 		<img src="aspects/color/aqua.png"><br>
+    <img src="aspects/color/machina.png" title="machina"> = 		<img src="aspects/color/motus.png"> + 						<img src="aspects/color/instrumentum.png"><br>
+    <img src="aspects/color/meto.png" title="meto"> = 				<img src="aspects/color/messis.png"> + 						<img src="aspects/color/instrumentum.png"><br>
+	<img src="aspects/color/pannus.png" title="pannus"> = 			<img src="aspects/color/instrumentum.png"> + 				<img src="aspects/color/bestia.png"><br>
+    <img src="aspects/color/potentia.png" title="potentia"> = 		<img src="aspects/color/ordo.png"> + 						<img src="aspects/color/ignis.png"><br>
+    <img src="aspects/color/saxum.png" title="saxum"> = 			<img src="aspects/color/terra.png"> + 						<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/telum.png" title="telum"> = 			<img src="aspects/color/instrumentum.png"> + 				<img src="aspects/color/perditio.png"><br>
+    <img src="aspects/color/tutamen.png" title="tutamen"> = 		<img src="aspects/color/instrumentum.png"> + 				<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/victus.png" title="victus"> = 			<img src="aspects/color/aqua.png"> + 						<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/vitreus.png" title="viterus"> = 		<img src="aspects/color/saxum.png"> + 						<img src="aspects/color/aqua.png">
     </div>
     
     <div class="col-sm-4">
-    <img src="img/arbor.png" title="arbor"> = 		<img src="img/terra.png"> + 		<img src="img/herba.png"><br>
-    <img src="img/cognitio.png" title="cognitio"> = 		<img src="img/terra.png"> + 		<img src="img/spiritus.png"><br>
-    <img src="img/fabrico.png" title="fabrico"> = 		<img src="img/humanus.png"> + 		<img src="img/instrumentum.png"><br>
-    <img src="img/granum.png" title="granum"> = 		<img src="img/victus.png"> + 		<img src="img/terra.png"><br>
-    <img src="img/instrumentum.png" title="instrumentum"> = 	<img src="img/humanus.png"> +		<img src="img/ordo.png"><br>
-    <img src="img/lucrum.png" title="lucrum"> = 		<img src="img/humanus.png"> + 		<img src="img/fames.png"><br>
-    <img src="img/messis.png" title="messis"> = 		<img src="img/herba.png"> + 		<img src="img/humanus.png"><br>
-    <img src="img/mortuus.png" title="mortuus"> = 		<img src="img/victus.png"> + 		<img src="img/perditio.png"><br>
-    <img src="img/perfodio.png" title="perfodio"> = 		<img src="img/humanus.png"> + 		<img src="img/saxum.png"><br>
-    <img src="img/praecantatio.png" title="praecantatio"> = 	<img src="img/vacuos.png"> + 		<img src="img/potentia.png"><br>
-    <img src="img/sensus.png" title="sensus"> = 		<img src="img/aer.png"> + 			<img src="img/spiritus.png"><br>
-    <img src="img/tempestas.png" title="tempestas"> = 	<img src="img/aer.png"> + 			<img src="img/gelum.png"><br>
-    <img src="img/vacuos.png" title="vacuos"> = 		<img src="img/aer.png"> + 			<img src="img/perditio.png"><br>
-    <img src="img/vinculum.png" title="vinculum"> = 		<img src="img/motus.png"> + 		<img src="img/perditio.png"><br>
-    <img src="img/volatus.png" title="volatus"> = 		<img src="img/aer.png"> + 			<img src="img/motus.png">
+    <img src="aspects/color/arbor.png" title="arbor"> = 			<img src="aspects/color/terra.png"> + 		<img src="aspects/color/herba.png"><br>
+    <img src="aspects/color/cognitio.png" title="cognitio"> = 		<img src="aspects/color/terra.png"> + 		<img src="aspects/color/spiritus.png"><br>
+    <img src="aspects/color/fabrico.png" title="fabrico"> = 		<img src="aspects/color/humanus.png"> + 	<img src="aspects/color/instrumentum.png"><br>
+    <img src="aspects/color/granum.png" title="granum"> = 			<img src="aspects/color/victus.png"> + 		<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/instrumentum.png" title="instrumentum"> = 	<img src="aspects/color/humanus.png"> +	<img src="aspects/color/ordo.png"><br>
+    <img src="aspects/color/lucrum.png" title="lucrum"> = 			<img src="aspects/color/humanus.png"> + 	<img src="aspects/color/fames.png"><br>
+    <img src="aspects/color/messis.png" title="messis"> = 			<img src="aspects/color/herba.png"> + 		<img src="aspects/color/humanus.png"><br>
+    <img src="aspects/color/mortuus.png" title="mortuus"> = 		<img src="aspects/color/victus.png"> + 		<img src="aspects/color/perditio.png"><br>
+    <img src="aspects/color/perfodio.png" title="perfodio"> = 		<img src="aspects/color/humanus.png"> + 	<img src="aspects/color/saxum.png"><br>
+    <img src="aspects/color/praecantatio.png" title="praecantatio"> = 	<img src="aspects/color/vacuos.png"> + 	<img src="aspects/color/potentia.png"><br>
+    <img src="aspects/color/sensus.png" title="sensus"> = 			<img src="aspects/color/aer.png"> + 		<img src="aspects/color/spiritus.png"><br>
+    <img src="aspects/color/tempestas.png" title="tempestas"> = 	<img src="aspects/color/aer.png"> + 		<img src="aspects/color/gelum.png"><br>
+    <img src="aspects/color/vacuos.png" title="vacuos"> = 			<img src="aspects/color/aer.png"> + 		<img src="aspects/color/perditio.png"><br>
+    <img src="aspects/color/vinculum.png" title="vinculum"> = 		<img src="aspects/color/motus.png"> + 		<img src="aspects/color/perditio.png"><br>
+    <img src="aspects/color/volatus.png" title="volatus"> = 		<img src="aspects/color/aer.png"> + 		<img src="aspects/color/motus.png">
     </div>
     
     <div class="col-sm-4">
-    <img src="img/auram.png" title="auram"> = 		<img src="img/praecantatio.png"> + 	<img src="img/aer.png"><br>
-    <img src="img/corpus.png" title="corpus"> = 		<img src="img/mortuus.png"> + 		<img src="img/bestia.png"><br>
-    <img src="img/fames.png" title="fames"> = 		<img src="img/victus.png"> + 		<img src="img/vacuos.png"><br>
-    <img src="img/herba.png" title="herba"> = 		<img src="img/granum.png"> + 		<img src="img/terra.png"><br>
-    <img src="img/iter.png" title="iter"> = 			<img src="img/motus.png"> + 		<img src="img/terra.png"><br>
-    <img src="img/lux.png" title="lux"> = 			<img src="img/aer.png"> + 			<img src="img/ignis.png"><br>
-    <img src="img/metallum.png" title="metallum"> = 		<img src="img/saxum.png"> + 		<img src="img/ordo.png"><br>
-	<img src="img/motus.png" title="motus"> = 		<img src="img/aer.png"> + 			<img src="img/aqua.png"><br>
-	<img src="img/permutatio.png" title="permutatio"> =	<img src="img/motus.png"> + 		<img src="img/aqua.png"><br>
-	<img src="img/sano.png" title="sano"> = 			<img src="img/victus.png"> + 		<img src="img/victus.png"><br>
-    <img src="img/spiritus.png" title="spiritus"> = 		<img src="img/victus.png"> + 		<img src="img/mortuus.png"><br>
-    <img src="img/tenebrae.png" title="tenebrae"> = 		<img src="img/vacuos.png"> + 		<img src="img/lux.png"><br>
-    <img src="img/venenum.png" title="venenum"> = 		<img src="img/aqua.png"> + 			<img src="img/mortuus.png"><br>
-    <img src="img/vitium.png" title="vitium"> = 		<img src="img/praecantatio.png"> + 	<img src="img/perditio.png">
+    <img src="aspects/color/auram.png" title="auram"> = 		<img src="aspects/color/praecantatio.png"> + 	<img src="aspects/color/aer.png"><br>
+    <img src="aspects/color/corpus.png" title="corpus"> = 		<img src="aspects/color/mortuus.png"> + 		<img src="aspects/color/bestia.png"><br>
+    <img src="aspects/color/fames.png" title="fames"> = 		<img src="aspects/color/victus.png"> + 			<img src="aspects/color/vacuos.png"><br>
+    <img src="aspects/color/herba.png" title="herba"> = 		<img src="aspects/color/granum.png"> + 			<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/iter.png" title="iter"> = 			<img src="aspects/color/motus.png"> + 			<img src="aspects/color/terra.png"><br>
+    <img src="aspects/color/lux.png" title="lux"> = 			<img src="aspects/color/aer.png"> + 			<img src="aspects/color/ignis.png"><br>
+    <img src="aspects/color/metallum.png" title="metallum"> = 	<img src="aspects/color/saxum.png"> + 			<img src="aspects/color/ordo.png"><br>
+	<img src="aspects/color/motus.png" title="motus"> = 		<img src="aspects/color/aer.png"> + 			<img src="aspects/color/aqua.png"><br>
+	<img src="aspects/color/permutatio.png" title="permutatio"> =	<img src="aspects/color/motus.png"> + 		<img src="aspects/color/aqua.png"><br>
+	<img src="aspects/color/sano.png" title="sano"> = 			<img src="aspects/color/victus.png"> + 			<img src="aspects/color/victus.png"><br>
+    <img src="aspects/color/spiritus.png" title="spiritus"> = 	<img src="aspects/color/victus.png"> + 			<img src="aspects/color/mortuus.png"><br>
+    <img src="aspects/color/tenebrae.png" title="tenebrae"> = 	<img src="aspects/color/vacuos.png"> + 			<img src="aspects/color/lux.png"><br>
+    <img src="aspects/color/venenum.png" title="venenum"> = 	<img src="aspects/color/aqua.png"> + 			<img src="aspects/color/mortuus.png"><br>
+    <img src="aspects/color/vitium.png" title="vitium"> = 		<img src="aspects/color/praecantatio.png"> + 	<img src="aspects/color/perditio.png">
     </div></div><hr></div>
     
     <center><h2>Research Help:</h2>
@@ -271,11 +270,10 @@ $(function() {
 	</table></center><hr>
      
     <p>to-do:<br>
-    • aspect tool tips<br>
     • hidden research<br>
-    • maybe new layout</p></center>
+    • maybe new layout?</p></center>
     
 </div>
 	
-<p><hr><center><h7><grey>THANKS YTHRI ON GITHUB FOR THE RESEARCH PLUGIN, EDITED BY ME~<br>&copy; 2014 ： <blue>KURISU</blue>BROOKS ： ALL RIGHTS RESERVED<br>CONTRIBUTED TO BY <red>HEDGEHOG1029</red></grey></h7></center></p>
+<hr><p><center><grey>SPECIAL THANKS : <a href="https://github.com/ythri/"><blue>YTHRI</blue></a> & <red>HEDGEHOG1029</red><br>&copy; 2014 : <a href="http://kurisubrooks.com/"><blue>KURISU</blue>BROOKS</a> : ALL RIGHTS RESERVED</grey></center></p></div></div>
 </div></body></html>
