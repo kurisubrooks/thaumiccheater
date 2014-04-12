@@ -18,6 +18,12 @@
 <link href="css/main.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    
+<script>
+$(function() {
+    $( document ).tooltip();
+});
+</script>
 
 <script>
 	graph = {};
@@ -190,26 +196,27 @@
 	<h2><p><center><purple>~ thaumcraft</purple><grey> cheat sheet ~</grey></center></p></h2><red><center>NOTE: HIGHLY WIP</center></red><br></div>
     
     <div class="text-center">
+
     <h2>Primal Aspects:</h2>
-	<img src="img/aer.png">
-	<img src="img/aqua.png">
-	<img src="img/ignis.png">
-	<img src="img/perditio.png">
-	<img src="img/ordo.png">
-	<img src="img/terra.png">
+	<img id="aer1" src="img/aer.png" title="aer">
+	<img id="aqua1" src="img/aqua.png" title="aqua">
+	<img id="ignis1" src="img/ignis.png" title="ignis">
+	<img id="perditio1" src="img/perditio.png" title="perditio">
+	<img id="ordo1" src="img/ordo.png" title="ordo">
+	<img id="terra1" src="img/terra.png" title="terra">
     <hr>
     
 	<h2>Compound Aspects:</h2>
 	<div class="row">
     <div class="col-sm-4">
-    <img src="img/alienis.png"> = 		<img src="img/vacuos.png"> + 		<img src="img/tenebrae.png"><br>
-    <img src="img/bestia.png"> = 		<img src="img/motus.png"> + 		<img src="img/victus.png"><br>
-    <img src="img/exanimis.png"> = 		<img src="img/motus.png"> + 		<img src="img/mortuus.png"><br>
-    <img src="img/gelum.png"> = 		<img src="img/aqua.png"> + 			<img src="img/ordo.png"><br>
-    <img src="img/humanus.png"> = 		<img src="img/bestia.png"> + 		<img src="img/cognitio.png"><br>
-    <img src="img/limus.png"> = 		<img src="img/victus.png"> + 		<img src="img/aqua.png"><br>
-    <img src="img/machina.png"> = 		<img src="img/motus.png"> + 		<img src="img/instrumentum.png"><br>
-    <img src="img/meto.png"> = 			<img src="img/messis.png"> + 		<img src="img/instrumentum.png"><br>
+    <img src="img/alienis.png" title="alienis"> = 		<img src="img/vacuos.png"> + 		<img src="img/tenebrae.png"><br>
+    <img src="img/bestia.png" title="bestia"> = 		<img src="img/motus.png"> + 		<img src="img/victus.png"><br>
+    <img src="img/exanimis.png" title="exanimis"> = 		<img src="img/motus.png"> + 		<img src="img/mortuus.png"><br>
+    <img src="img/gelum.png" title="gelum"> = 		<img src="img/aqua.png"> + 			<img src="img/ordo.png"><br>
+    <img src="img/humanus.png" title="humanus"> = 		<img src="img/bestia.png"> + 		<img src="img/cognitio.png"><br>
+    <img src="img/limus.png" title="limus"> = 		<img src="img/victus.png"> + 		<img src="img/aqua.png"><br>
+    <img src="img/machina.png" title="machina"> = 		<img src="img/motus.png"> + 		<img src="img/instrumentum.png"><br>
+    <img src="img/meto.png" title="meto"> = 			<img src="img/messis.png"> + 		<img src="img/instrumentum.png"><br>
 	<img src="img/pannus.png"> = 		<img src="img/instrumentum.png"> + 	<img src="img/bestia.png"><br>
     <img src="img/potentia.png"> = 		<img src="img/ordo.png"> + 			<img src="img/ignis.png"><br>
     <img src="img/saxum.png"> = 		<img src="img/terra.png"> + 		<img src="img/terra.png"><br>
