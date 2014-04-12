@@ -36,7 +36,7 @@ body {
 }
 
 span{display:inline-block;padding: 10px;}
-opaq{opacity:0.1;filter:Alpha(opacity=10);}
+opaq{opacity:0.3;filter:Alpha(opacity=30);}
 
 grey {color: #8b8b8b;}
 red {color: #e74c3c;}
